@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <nav class="navbar navbar-custom">
+	<a href="/" class="navbar-brand"><img src="https://raw.githubusercontent.com/MariaMariiia/Finna-kirjastohaku/main/Finna%20logo.PNG" alt="" style="height:99%; width: 70%">default</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbar2">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Link <span class="sr-only">Home</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="//codeply.com">Codeply</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="axios.js"></script
+<script>$(document).ready(function(){
+  $("btn btn-primary").click(function(){
+    $("results").setSearchParameters();
+  });
+});
+</script>
+</head>
+<body>
+
+<style>
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-text {
+    color: #FFFFFF;
+}
+
+/* Modify the background color */
+.navbar-custom {
+    /*background-color: #AB47BC;*/
+    background-color: #4A148C;
+}
+
+.navbar-collapse .collapse{
+ color: #FFFFFF;
+}
+
+.navbar-brand{
+
+{
+
+.dropdown{
+background-color: #FFEBEE;
+}
+
+
+</style>
+
+<div class="jumbotron text-center">
+  <h1>Hae Finna-kokoelmista!</h1>
+  <p>Hae kirjoja, äänitteitä ja muita tuotteita Suomen kirjastojen valikoimista.</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+    <!--/* Eka Dropdown alkaa */-->
+    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#FFFFFF; color:black; padding-right:1%">
+    Materiaali/Material
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="font:black">
+    <a class="dropdown-item" href="#" value="kirja">Kirja/Book</a>
+    <a class="dropdown-item" href="#" value="aanite">Äänite/Recording</a>
+    <a class="dropdown-item" href="#" value="muu">Muu/Else</a>
+  </div>
+</div>
+     <!--/* Eka Dropdown loppuu */-->
+     
+<div><input class="btn btn-primary" id="submit-button" type="submit" value="Haku/Submit" style="margin-top:10%; width:112%"></div>     
+      <!-- /* <h2>Column 1</h2>*/  -->
+</div>
+    <div class="col-sm-4">
+     <!--/*  <h2>Kieli</h2>*/  -->
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#FFFFFF; color:black; padding-right:1%">
+    Kieli/Language
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="font:black">
+    <a class="dropdown-item" href="#" value="suomi">Suomi/Finnish</a>
+    <a class="dropdown-item" href="#" value="englanti">Englanti/English</a>
+    <a class="dropdown-item" href="#" value="ruotsi">Ruotsi/Swedish</a>
+  </div>
+</div>
+    </div>
+    <div class="col-sm-4">
+     <!--/* <h2>Column 3</h2>    */  -->   
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+</div>
+<!-- Tähän pitäisi tulla haun tulokset alle:   -->
+<div class="results">
+
+</div>
+<!-- Haun tulokset -kohta loppuu -->
+</body>
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); margin-top: 1%; background-color: #4A148C; color: #FFFFFF; margin-bottom:0%">
+    © 2020 Copyright:
+    <a class="text-white" href="https://finna.fi/">Finna</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+</html>
