@@ -9,6 +9,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   
+  <!-- ja sitten JQuery-kirjastot alla:   -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!--  JQuery-kirjasto päättyi -->
+  
   <nav class="navbar navbar-custom">
 	<a href="/" class="navbar-brand"><img src="https://raw.githubusercontent.com/MariaMariiia/Finna-kirjastohaku/main/Finna%20logo.PNG" alt="" style="height:99%; width: 70%">default</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2">
@@ -28,8 +34,20 @@
         </ul>
     </div>
 </nav>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="axios.js"></script
+
+ <link rel="stylesheet" href="css/bootstrap-multiselect/bootstrap-multiselect.css" type="text/css">
+ 
+  <script type="text/javascript" src="js/bootstrap-multiselect/bootstrap-multiselect.js"></script>
+<script type="text/javascript">
+ 
+    $(document).ready(function() {
+ 
+        $('#multi-select-demo').multiselect();
+ 
+    });
+ 
+</script>
+
 <script>$(document).ready(function(){
   $("btn btn-primary").click(function(){
     $("results").setSearchParameters();
@@ -79,7 +97,7 @@ background-color: #FFEBEE;
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#FFFFFF; color:black; padding-right:1%">
     Materiaali/Material
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="font:black">
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="font:black" id="multi-select-demo" multiple="multiple>
     <a class="dropdown-item" href="#" value="kirja">Kirja/Book</a>
     <a class="dropdown-item" href="#" value="aanite">Äänite/Recording</a>
     <a class="dropdown-item" href="#" value="muu">Muu/Else</a>
@@ -96,7 +114,7 @@ background-color: #FFEBEE;
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#FFFFFF; color:black; padding-right:1%">
     Kieli/Language
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="font:black">
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="font:black" id="multi-select-demo" multiple="multiple>
     <a class="dropdown-item" href="#" value="suomi">Suomi/Finnish</a>
     <a class="dropdown-item" href="#" value="englanti">Englanti/English</a>
     <a class="dropdown-item" href="#" value="ruotsi">Ruotsi/Swedish</a>
