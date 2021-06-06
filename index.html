@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Finna search</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -13,10 +13,20 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
   <!--  JQuery-kirjasto päättyi -->
+  <!-- 
+          <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="css/bootstrap-multiselect/bootstrap-multiselect.css" type="text/css">
+        <script type="text/javascript" src="js/bootstrap-multiselect/bootstrap-multiselect.js"></script>  -->
   
+  
+  <!--    NAVBAR ALKAA -->
   <nav class="navbar navbar-custom">
-	<a href="/" class="navbar-brand"><img src="https://raw.githubusercontent.com/MariaMariiia/Finna-kirjastohaku/main/Finna%20logo.PNG" alt="" style="height:99%; width: 70%">default</a>
+	<a href="/" class="navbar-brand"><img src="https://raw.githubusercontent.com/MariaMariiia/Finna-kirjastohaku/main/Finna%20logo.PNG" alt="" style="height:99%; width: 70%"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -34,29 +44,14 @@
         </ul>
     </div>
 </nav>
-
+<!-- /*
  <link rel="stylesheet" href="css/bootstrap-multiselect/bootstrap-multiselect.css" type="text/css">
  
-  <script type="text/javascript" src="js/bootstrap-multiselect/bootstrap-multiselect.js"></script>
-<script type="text/javascript">
- 
-    $(document).ready(function() {
- 
-        $('#multi-select-demo').multiselect();
- 
-    });
- 
-</script>
-
-<script>$(document).ready(function(){
-  $("btn btn-primary").click(function(){
-    $("results").setSearchParameters();
-  });
-});
-</script>
+  <script type="text/javascript" src="js/bootstrap-multiselect/bootstrap-multiselect.js"></script>*/ -->
 </head>
-<body>
 
+<body>
+<!-- /*Style alkaa*/ -->
 <style>
         .navbar-custom .navbar-brand,
         .navbar-custom .navbar-text {
@@ -81,58 +76,50 @@
 background-color: #FFEBEE;
 }
 
+iframe {
+width: 400px;
+height: 200px;
+border: 1px solid black;
+border-radius: 5px;
+}
 
 </style>
-
+<!-- /* Style loppuu */ -->
 <div class="jumbotron text-center">
   <h1>Hae Finna-kokoelmista!</h1>
   <p>Hae kirjoja, äänitteitä ja muita tuotteita Suomen kirjastojen valikoimista.</p> 
 </div>
-  
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-    <!--/* Eka Dropdown alkaa */-->
-    <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#FFFFFF; color:black; padding-right:1%">
-    Materiaali/Material
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="font:black">
-    <a class="dropdown-item" href="#" value="kirja">Kirja/Book</a>
-    <a class="dropdown-item" href="#" value="aanite">Äänite/Recording</a>
-    <a class="dropdown-item" href="#" value="muu">Muu/Else</a>
-  </div>
-</div>
-     <!--/* Eka Dropdown loppuu */-->
-     
-<div><input class="btn btn-primary" id="submit-button" type="submit" value="Haku/Submit" style="margin-top:10%; width:112%"></div>     
-      <!-- /* <h2>Column 1</h2>*/  -->
-</div>
-    <div class="col-sm-4">
-     <!--/*  <h2>Kieli</h2>*/  -->
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#FFFFFF; color:black; padding-right:1%">
-    Kieli/Language
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="font:black">
-    <a class="dropdown-item" href="#" value="suomi">Suomi/Finnish</a>
-    <a class="dropdown-item" href="#" value="englanti">Englanti/English</a>
-    <a class="dropdown-item" href="#" value="ruotsi">Ruotsi/Swedish</a>
-  </div>
-</div>
-    </div>
-    <div class="col-sm-4">
-     <!--/* <h2>Column 3</h2>    */  -->   
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-  </div>
-</div>
-<!-- Tähän pitäisi tulla haun tulokset alle:   -->
-<div class="results">
+<!-- /*
 
+*/ -->
+<div class="container">
+<div class="example">
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#option-droup-demo').multiselect({
+            enableClickableOptGroups: true
+        });
+        });
+    </script>
+    <select id="option-droup-demo" multiple="multiple">
+        <optgroup label="Materiaali/Material">
+            <option value="kirjat">Kirjat/Books</option>
+            <option value="aanitteet">Äänitteet/Recordings</option>
+            <option value="lehdet" selected="selected">Lehdet ja artikkelit/Articles</option>
+            <option value="kuvat" selected="selected">Kuvat/Pictures</option>
+        </optgroup>
+        <optgroup label="Kielet/Languages">
+            <option value="suomi">Suomi/Finnish</option>
+            <option value="englanti">Englanti/English</option>
+            <option value="ruotsi">Ruotsi/Swedish</option>
+        </optgroup>
+    </select>
 </div>
-<!-- Haun tulokset -kohta loppuu -->
+</div>
+</div>
+<form>
+<button type="submit" onclick="return setSearchParameters();">Submit</button>
+</form>
 </body>
 <footer class="bg-light text-center text-lg-start">
   <!-- Copyright -->
