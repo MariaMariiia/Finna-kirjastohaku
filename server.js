@@ -12,15 +12,19 @@ select.addEventListener('change', setSearch);
 function setSearchParameters(){
 	const choice = select.value;
 	
-	if(choice == 'kirja' && choice=='suomi'){
+	if(choice == 'kirjat' && choice=='suomi'){
 		getFinnishBooks();
 	
 }
-    else if(choice == 'kirja' && choice=='englanti'){
+    else if(choice == 'kirjat' && choice=='englanti'){
 		getEnglishBooks();
 	}
 	
-	    else if(choice == 'aanite' && choice=='suomi'){
+	    else if(choice == 'aanitteet' && choice=='suomi'){
+		getFinnishRecordings();
+	}
+	
+		    else if(choice == 'aanitteet' && choice=='englanti'){
 		getFinnishRecordings();
 	}
 }
@@ -60,14 +64,15 @@ function getFinnishRecordings() {
     });
 }
 
+function getEnglishRecordings() {
+  axios.get('https://finna.fi/Search/Results?sort=relevance&bool0%5B%5D=AND&lookfor0%5B%5D=&type0%5B%5D=AllFields&lookfor0%5B%5D=&type0%5B%5D=AllFields&join=AND&filter%5B%5D=%7Elanguage%3A%22eng%22&filter%5B%5D=%7Eformat%3A%220%2FSound%2F%22&limit=20');
+      console.log(res.data.login);
+    });
+	
+	    .catch(err => {
+      console.log(err);
+    });
+}
 //Mieti missä näitä kutsutaan!!!!!!!!!!!!!!!!!!!
 //getFinnishBooks();
 //getEnglishBooks();
-
-var myJSON = '{ "teos": { "display_name":"EMPLOYEE NAME:", "format":"string", "type":"textbox", "dflt":"null", "isMandatory":"true" } }';
-
- var employee = $.parseJSON(myJSON).employee; //get employee object
- if (employee.type == "textbox") {
-   $('<label>').attr({for: 'employee_name'}).text(employee.display_name).appendTo($('body'));
-   $('<input>').attr({type: 'text', id:'nonPresenterAuthors'}).appendTo($('body'));
- }
