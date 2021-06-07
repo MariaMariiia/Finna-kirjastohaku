@@ -49,34 +49,6 @@
  
   <script type="text/javascript" src="js/bootstrap-multiselect/bootstrap-multiselect.js"></script>*/ -->
 <script src="server.js"></script>   
-<script type = "text/javascript">  
-function setSearchParameters(){
-	var choice = select.value;
-	
-	if(choice == 'kirjat' && choice=='suomi'){
-		getFinnishBooks();
-	
-}
-    else if(choice == 'kirjat' && choice=='englanti'){
-		getEnglishBooks();
-	}
-	
-	    else if(choice == 'kirjat' && choice=='ruotsi'){
-		getEnglishBooks();
-	}
-	
-	    else if(choice == 'aanitteet' && choice=='suomi'){
-		getFinnishRecordings();
-	}
-	
-		    else if(choice == 'aanitteet' && choice=='englanti'){
-		getFinnishRecordings();
-		
-				    else if(choice == 'aanitteet' && choice=='ruotsi'){
-		getFinnishRecordings();
-	}
-}
-</script>  
 
 </head>
 
@@ -147,10 +119,10 @@ border-radius: 5px;
 </div>
 </div>
 </div>
-<form>
+<div>
 <!-- <button type="submit" onclick="return setSearchParameters();">Submit</button> -->
 <input type = "button" onclick = "setSearchParameters()" value = "Display">
-</form>
+</div>
 </body>
 <footer class="bg-light text-center text-lg-start">
   <!-- Copyright -->
