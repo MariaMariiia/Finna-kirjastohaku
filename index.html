@@ -48,6 +48,36 @@
  <link rel="stylesheet" href="css/bootstrap-multiselect/bootstrap-multiselect.css" type="text/css">
  
   <script type="text/javascript" src="js/bootstrap-multiselect/bootstrap-multiselect.js"></script>*/ -->
+<script src="server.js"></script>   
+<script type = "text/javascript">  
+function setSearchParameters(){
+	const choice = select.value;
+	
+	if(choice == 'kirjat' && choice=='suomi'){
+		getFinnishBooks();
+	
+}
+    else if(choice == 'kirjat' && choice=='englanti'){
+		getEnglishBooks();
+	}
+	
+	    else if(choice == 'kirjat' && choice=='ruotsi'){
+		getEnglishBooks();
+	}
+	
+	    else if(choice == 'aanitteet' && choice=='suomi'){
+		getFinnishRecordings();
+	}
+	
+		    else if(choice == 'aanitteet' && choice=='englanti'){
+		getFinnishRecordings();
+		
+				    else if(choice == 'aanitteet' && choice=='ruotsi'){
+		getFinnishRecordings();
+	}
+}
+</script>  
+
 </head>
 
 <body>
@@ -118,7 +148,8 @@ border-radius: 5px;
 </div>
 </div>
 <form>
-<button type="submit" onclick="return setSearchParameters();">Submit</button>
+<!-- <button type="submit" onclick="return setSearchParameters();">Submit</button> -->
+<input type = "button" onclick = "setSearchParameters()" value = "Display">
 </form>
 </body>
 <footer class="bg-light text-center text-lg-start">
