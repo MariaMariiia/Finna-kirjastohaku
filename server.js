@@ -10,7 +10,7 @@ const para = document.querySelector('p');
 select.addEventListener('change', setSearch);
 
 function setSearchParameters(){
-	const choice = select.value;
+	var choice = select.value;
 	
 	if(choice == 'kirjat' && choice=='suomi'){
 		getFinnishBooks();
