@@ -20,14 +20,28 @@ function setSearchParameters(){
 		getEnglishBooks();
 	}
 	
+	    else if(choice == 'kirjat' && choice=='ruotsi'){
+		getEnglishBooks();
+	}
+	
 	    else if(choice == 'aanitteet' && choice=='suomi'){
 		getFinnishRecordings();
 	}
 	
 		    else if(choice == 'aanitteet' && choice=='englanti'){
 		getFinnishRecordings();
+		
+				    else if(choice == 'aanitteet' && choice=='ruotsi'){
+		getFinnishRecordings();
 	}
 }
+/*
+$('#form').on('submit',function(e){
+  $.post('google.com'.$(this).serialize(),function(data){
+    //#do what you want here,in your url after handle a data redirect to your page,with this inputs.
+  })
+});
+*/
 
 //Jos kieli on suomi ja aineistotyyppi on kirja:
 function getFinnishBooks() {
