@@ -104,25 +104,28 @@ border-radius: 5px;
         });
     </script>
     <select id="option-droup-demo" multiple="multiple">
-        <optgroup label="Materiaali/Material">
-            <option value="kirjat">Kirjat/Books</option>
-            <option value="aanitteet">Äänitteet/Recordings</option>
-            <option value="lehdet" selected="selected">Lehdet ja artikkelit/Articles</option>
-            <option value="kuvat" selected="selected">Kuvat/Pictures</option>
+        <optgroup label="Materiaali/Material" id="materiaali">
+            <option value="kirjat" id="kirjat">Kirjat/Books</option>
+            <option value="aanitteet" id="aanitteet">Äänitteet/Recordings</option>
+            <option value="lehdet" id="artikkelit" selected="selected">Lehdet ja artikkelit/Articles</option>
+            <option value="kuvat" id="kuvat" selected="selected">Kuvat/Pictures</option>
         </optgroup>
-        <optgroup label="Kielet/Languages">
-            <option value="suomi">Suomi/Finnish</option>
-            <option value="englanti">Englanti/English</option>
-            <option value="ruotsi">Ruotsi/Swedish</option>
+        <optgroup label="Kielet/Languages" id="kielet">
+            <option value="suomi" id="suomi">Suomi/Finnish</option>
+            <option value="englanti" id="englanti">Englanti/English</option>
+            <option value="ruotsi" id="ruotsi">Ruotsi/Swedish</option>
         </optgroup>
     </select>
 </div>
 </div>
 </div>
-<div>
+<form>
 <!-- <button type="submit" onclick="return setSearchParameters();">Submit</button> -->
-<input type = "button" onclick = "setSearchParameters()" value = "Display">
-</div>
+<input type = "button" onclick = "setSearchParameters()" value = "Display" id="load">
+</form>
+      <form>
+         <input type="button" onclick="display()" value="Click me" />
+      </form>
 </body>
 <footer class="bg-light text-center text-lg-start">
   <!-- Copyright -->
