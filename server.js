@@ -12,22 +12,20 @@ select.addEventListener('change', setSearch);
 */
 
 function setSearchParameters(){
-	materiaali = document.getElementById("materiaali").value;
-	kieli = document.getElementById("kielet").value;
-	/*const choice = select.value;*/
-	
-	if(materiaali == 'kirjat' && kielet=='suomi'){
-		$.get('https://finna.fi/Search/Results?limit=0&filter%5B%5D=%7Eformat%3A%220%2FBook%2F%22&filter%5B%5D=%7Elanguage%3A%22fin%22&type=AllFields'',function(data,status) {
-      ...parse the data...
-},'html');
-	
-}
+      const material = $("#materiaali").val()
+      const language = $("#kieli").val()
+
+
+      if (materiaali == 'kirjat' && kielet == 'suomi') {
+        getFinnishBooks();
+
+      } 
     else if(materiaali == 'kirjat' && kielet=='englanti'){
 		getEnglishBooks();
 	}
 	
 	    else if(materiaali == 'kirjat' && kielet=='ruotsi'){
-		getEnglishBooks();
+		getSwedishBooks();
 	}
 	
 	    else if(materiaali == 'aanitteet' && kielet=='suomi'){
@@ -35,7 +33,7 @@ function setSearchParameters(){
 	}
 	
 		    else if(materiaali == 'aanitteet' && kielet=='englanti'){
-		getFinnishRecordings();
+		getEnglishRecordings();
 		
 				    else if(materiaali == 'aanitteet' && kielet=='ruotsi'){
 		getFinnishRecordings();
