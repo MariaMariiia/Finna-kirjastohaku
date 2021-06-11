@@ -1,47 +1,22 @@
-// api url
-const api_url = 
-      "https://employeedetails.free.beeceptor.com/my/api/path";
-  
-// Defining async function
-async function getapi(url) {
-    
-    // Storing response
-    const response = await fetch(url);
-    
-    // Storing data in form of JSON
-    var data = await response.json();
-    console.log(data);
-    if (response) {
-        hideloader();
-    }
-    show(data);
-}
-// Calling that async function
-getapi(api_url);
-  
-// Function to hide the loader
-function hideloader() {
-    document.getElementById('loading').style.display = 'none';
-}
-// Function to define innerHTML for HTML table
-function show(data) {
-    let tab = 
-        `<tr>
-          <th>Name</th>
-          <th>Office</th>
-          <th>Position</th>
-          <th>Salary</th>
-         </tr>`;
-    
-    // Loop to access all rows 
-    for (let r of data.list) {
-        tab += `<tr> 
-    <td>${r.name} </td>
-    <td>${r.office}</td>
-    <td>${r.position}</td> 
-    <td>${r.salary}</td>          
-</tr>`;
-    }
-    // Setting innerHTML as tab variable
-    document.getElementById("employees").innerHTML = tab;
-}
+fetch("https://finna.fi/AJAX/JSON?filter%5B%5D=%7Eformat_ext_str_mv%3A%220%2FBook%2F%22&filter%5B%5D=%7Elanguage%3A%22fin%22&join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=&type0%5B%5D=AllFields&method=getSideFacets&searchClassId=Solr&location=side&configIndex=0&query=filter%255B%255D%3D%257Eformat_ext_str_mv%253A%25220%252FBook%252F%2522%26filter%255B%255D%3D%257Elanguage%253A%2522fin%2522%26join%3DAND%26bool0%255B%255D%3DAND%26lookfor0%255B%255D%3D%26type0%255B%255D%3DAllFields&querySuppressed=0&extraFields=handler%2Climit%2CselectedShards%2Csort%2Cview&enabledFacets%5B%5D=free_online_boolean%3A1&enabledFacets%5B%5D=format_ext_str_mv&enabledFacets%5B%5D=language", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "fi-FI,fi;q=0.9,en-US;q=0.8,en;q=0.7",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "sec-ch-ua": "\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "referrer": "https://finna.fi/Search/Results?limit=0&filter%5B%5D=%7Eformat_ext_str_mv%3A%220%2FBook%2F%22&filter%5B%5D=%7Elanguage%3A%22fin%22&join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=&type0%5B%5D=AllFields",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+});
+
+   
