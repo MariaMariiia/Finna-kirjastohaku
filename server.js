@@ -1,3 +1,4 @@
+function getFinnishBooks(){
 fetch("https://finna.fi/AJAX/JSON?filter%5B%5D=%7Eformat_ext_str_mv%3A%220%2FBook%2F%22&filter%5B%5D=%7Elanguage%3A%22fin%22&join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=&type0%5B%5D=AllFields&method=getSideFacets&searchClassId=Solr&location=side&configIndex=0&query=filter%255B%255D%3D%257Eformat_ext_str_mv%253A%25220%252FBook%252F%2522%26filter%255B%255D%3D%257Elanguage%253A%2522fin%2522%26join%3DAND%26bool0%255B%255D%3DAND%26lookfor0%255B%255D%3D%26type0%255B%255D%3DAllFields&querySuppressed=0&extraFields=handler%2Climit%2CselectedShards%2Csort%2Cview&enabledFacets%5B%5D=free_online_boolean%3A1&enabledFacets%5B%5D=format_ext_str_mv&enabledFacets%5B%5D=language", {
   "headers": {
     "accept": "application/json, text/javascript, */*; q=0.01",
@@ -18,5 +19,33 @@ fetch("https://finna.fi/AJAX/JSON?filter%5B%5D=%7Eformat_ext_str_mv%3A%220%2FBoo
   "mode": "cors",
   "credentials": "include"
 });
+}
 
-   
+function setSearchParameters(){
+	materiaali = document.getElementById("materiaali").value;
+	kielet = document.getElementById("kielet").value;
+	/*const choice = select.value;*/
+	
+	if(materiaali == 'kirjat' && kielet=='suomi'){
+  getFinnishBooks();
+	
+}
+    else if(materiaali == 'kirjat' && kielet=='englanti'){
+		getEnglishBooks();
+	}
+	
+	    else if(materiaali == 'kirjat' && kielet=='ruotsi'){
+		getEnglishBooks();
+	}
+	
+	    else if(materiaali == 'aanitteet' && kielet=='suomi'){
+		getFinnishRecordings();
+	}
+	
+		    else if(materiaali == 'aanitteet' && kielet=='englanti'){
+		getFinnishRecordings();
+		
+				    else if(materiaali == 'aanitteet' && kielet=='ruotsi'){
+		getFinnishRecordings();
+	}
+}
