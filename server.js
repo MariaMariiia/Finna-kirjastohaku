@@ -21,7 +21,26 @@ fetch("https://finna.fi/AJAX/JSON?filter%5B%5D=%7Eformat_ext_str_mv%3A%220%2FBoo
   "credentials": "include"
 }); */
 	$("#button").click(function () { 
-    $("#frame").attr("src", "https://finna.fi/Search/Results?sort=relevance&bool0%5B%5D=AND&lookfor0%5B%5D=&type0%5B%5D=AllFields&lookfor0%5B%5D=&type0%5B%5D=AllFields&join=AND&filter%5B%5D=%7Elanguage%3A%22fin%22&filter%5B%5D=%7Eformat%3A%220%2FBook%2F%22&limit=20");
+    /*$("#frame").attr("src", "https://finna.fi/Search/Results?sort=relevance&bool0%5B%5D=AND&lookfor0%5B%5D=&type0%5B%5D=AllFields&lookfor0%5B%5D=&type0%5B%5D=AllFields&join=AND&filter%5B%5D=%7Elanguage%3A%22fin%22&filter%5B%5D=%7Eformat%3A%220%2FBook%2F%22&limit=20");
+});*/
+	fetch("https://finna.fi/cache/ee6ade86faf34bb81b781594f0dbed69.min.js", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "fi-FI,fi;q=0.9,en-US;q=0.8,en;q=0.7",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "sec-ch-ua": "\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-dest": "script",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://finna.fi/Search/Results?sort=relevance&bool0%5B%5D=AND&lookfor0%5B%5D=&type0%5B%5D=AllFields&lookfor0%5B%5D=&type0%5B%5D=AllFields&join=AND&filter%5B%5D=~language%3A%22fin%22&filter%5B%5D=~format%3A%220%2FBook%2F%22&limit=20",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
 });
 }
 
