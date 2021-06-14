@@ -19,7 +19,7 @@
   <!--  JQuery-kirjasto päättyi -->
   <!-- 
           <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
-
+<!--
         <link rel="stylesheet" href="css/bootstrap-multiselect/bootstrap-multiselect.css" type="text/css">
         <script type="text/javascript" src="js/bootstrap-multiselect/bootstrap-multiselect.js"></script>  -->
   
@@ -98,7 +98,7 @@ border-radius: 5px;
 <div class="example">
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#option-droup-demo').multiselect({
+            $('#option-droup-demo').select({
             enableClickableOptGroups: true
         });
         });
@@ -108,12 +108,7 @@ border-radius: 5px;
             <option value="suomkirjat" id="suomkirjat">Suomalaiset kirjat</option>
             <option value="englkirjat" id="englkirjat">English books</option>
             <option value="ruotkirjat" id="ruotkirjat" selected="selected">Svenska böcker</option>
-        </optgroup>
-        <optgroup label="Kielet/Languages" id="kielet">
-            <option value="suomi" id="suomi">Suomi/Finnish</option>
-            <option value="englanti" id="englanti">Englanti/English</option>
-            <option value="ruotsi" id="ruotsi">Ruotsi/Swedish</option>
-        </optgroup>
+	    </optgroup>
     </select>
 </div>
 </div>
