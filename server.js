@@ -1,7 +1,7 @@
 function getFinnishBooks(){
 	
 	$("#button").click(function () { 
-    $("#frame").attr("src", "https://finna.fi/cache/ee6ade86faf34bb81b781594f0dbed69.min.js");
+    $("#frame").attr("src", "https://api.finna.fi/v1/search?lookfor=language%3A%22fin%22&filter%5B%5D=%7Eformat%3A%220%2FBook%2F%22&join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=&type0%5B%5D=AllFields");
 });
 	
 }
