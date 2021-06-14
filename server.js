@@ -23,8 +23,7 @@ fetch("https://finna.fi/AJAX/JSON?filter%5B%5D=%7Elanguage%3A%22fin%22&filter%5B
 function getFinnishBooks(){
 	
 	$("#button").click(function () { 
-    $("#frame").attr("src", "https://api.finna.fi/v1/search?lookfor=language%3A%22fin%22&filter%5B%5D=%7Eformat%3A%220%2FBook%2F%22&join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=&type0%5B%5D=AllFields");
-});
+    $("#frame").attr("src", "https://api.finna.fi/v1/search?lookfor=language%3A%22fin%22");
 	
 }
 
