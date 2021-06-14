@@ -27,10 +27,9 @@ fetch("https://finna.fi/AJAX/JSON?filter%5B%5D=%7Eformat_ext_str_mv%3A%220%2FBoo
 
 function setSearchParameters(){
 	materiaali = document.getElementById("materiaali").value;
-	kielet = document.getElementById("kielet").value;
 	/*const choice = select.value;*/
 	
-	if(materiaali == 'kirjat' && kielet=='suomi'){
+	if(materiaali == 'suomkirjat'){
   getFinnishBooks();
 	
 }
