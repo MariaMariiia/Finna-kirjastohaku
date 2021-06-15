@@ -13,10 +13,13 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- Axios -->
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="/path/to/cdn/bootstrap.min.css" />
+<script src="/path/to/cdn/jquery.min.js"></script>
+<script src="/path/to/cdn/bootstrap.min.js"></script>
 
   <!--  JQuery-kirjasto päättyi -->
+<link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css">
+<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
   <!-- 
           <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
 
@@ -49,6 +52,7 @@
  
   <script type="text/javascript" src="js/bootstrap-multiselect/bootstrap-multiselect.js"></script>*/ -->
 <script src="server.js"></script>   
+
 
 </head>
 
@@ -95,6 +99,7 @@ border-radius: 5px;
 
 */ -->
 <div class="container">
+	<!-- 
 <div class="example">
     <script type="text/javascript">
         $(document).ready(function() {
@@ -103,7 +108,7 @@ border-radius: 5px;
         });
         });
     </script>
-    <!-- <select id="option-droup-demo" multiple="multiple"> -->
+    <!-- <select id="option-droup-demo" multiple="multiple"> 
 	     <select id="option-droup-demo" multiple="multiple">
         <optgroup label="Materiaali/Material" id="materiaali">
             <option value="suomkirjat" id="suomkirjat">Suomalaiset kirjat</option>
@@ -112,22 +117,27 @@ border-radius: 5px;
 	    </optgroup>
     </select>
 </div>
+</div> -->
 </div>
-</div>
-<form>
+	 <!-- Standardi Select-lista -->
+<select id="demo" multiple="multiple">
+  <option value="suomkirjat">Suomalaiset kirjat</option>
+  <option value="ruotkirjat">English books</option>
+</select>
+<!--<form>
 <!-- <button type="submit" onclick="return setSearchParameters();">Submit</button> -->
-	 <div id="mydiv">
+	<!-- <div id="mydiv">
      <iframe id="frame" src="" width="100%" height="300">
      </iframe>	
  </div>
-	<button id="button">Load</button>
+	<!--<button id="button">Load</button>
 	<!-- 
 <input type = "button" onclick = "setSearchParameters()" value = "Display" id="load">
 </form>
       <form>
          <input type="button" onclick="display()" value="Click me" />
-      </form>
-</body><!-- /* -->
+      </form> -->
+</body>
 <footer class="bg-light text-center text-lg-start">
  Copyright 
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); margin-top: 1%; background-color: #4A148C; color: #FFFFFF; margin-bottom:0%">
