@@ -48,109 +48,37 @@
     </div>
 </nav>
 
- <link rel="stylesheet" href="css/bootstrap-multiselect/bootstrap-multiselect.css" type="text/css">
- 
-  <script type="text/javascript" src="js/bootstrap-multiselect/bootstrap-multiselect.js"></script>*/ 
-<script src="server.js"></script>   
-
-
-</head>
-
 <body>
-<!-- /*Style alkaa*/ -->
-<style>
-        .navbar-custom .navbar-brand,
-        .navbar-custom .navbar-text {
-    color: #FFFFFF;
-}
-
-/* Modify the background color */
-.navbar-custom {
-    /*background-color: #AB47BC;*/
-    background-color: #4A148C;
-}
-
-.navbar-collapse .collapse{
- color: #FFFFFF;
-}
-
-.navbar-brand{
-
-{
-
-.dropdown{
-background-color: #FFEBEE;
-}
-
-iframe {
-width: 400px;
-height: 200px;
-border: 1px solid black;
-border-radius: 5px;
-}
-
-</style>
-<!-- /* Style loppuu */ -->
-<div class="jumbotron text-center">
-  <h1>Hae Finna-kokoelmista!</h1>
-  <p>Hae kirjoja, äänitteitä ja muita tuotteita Suomen kirjastojen valikoimista.</p> 
-</div>
-<!-- /*
-
-*/ -->
 <div class="container">
-	
 <div class="example">
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#option-droup-demo').select({
-            enableClickableOptGroups: true
-        });
+            $('#option-droup-demo').multiselect();
         });
     </script>
-	
-
-<script type="text/javascript">
- 
-    $(document).ready(function() {
- 
-        $('#multi-select-demo').multiselect();
- 
-    });
- 
-</script>
-<select id="option-droup-demo" multiple="multiple"> 
-	     <select id="option-droup-demo" multiple="multiple">
-        <optgroup label="Materiaali/Material" id="materiaali">
-            <option value="suomkirjat" id="suomkirjat">Suomalaiset kirjat</option>
-            <option value="englkirjat" id="englkirjat">English books</option>
-            <option value="ruotkirjat" id="ruotkirjat" selected="selected">Svenska böcker</option>
-	    </optgroup>
+    <select id="option-droup-demo" multiple="multiple">
+        <optgroup label="Web Development">
+            <option value="jQuery">jQuery</option>
+            <option value="Bootstrap">Bootstrap</option>
+            <option value="HTML" selected="selected">HTML</option>
+            <option value="CSS" selected="selected">CSS</option>
+            <option value="Angular">Angular</option>
+        </optgroup>
+        <optgroup label="Programming Languages">
+            <option value="Java">Java</option>
+            <option value="csharp">C#</option>
+            <option value="Python">Python</option>
+        </optgroup>
+        <optgroup label="Databases">
+            <option value="MySQL">MySQL</option>
+            <option value="Oracle">Oracle</option>
+            <option value="MSSQL">MS SQL Server</option>
+        </optgroup>        
     </select>
 </div>
-</div> 
-</div>
 
-<form>
-<!-- <button type="submit" onclick="return setSearchParameters();">Submit</button> -->
-	<div id="mydiv">
-     <iframe id="frame" src="" width="100%" height="300">
-     </iframe>	
- </div>
-	<button id="button">Load</button>
-	
-<input type = "button" onclick = "setSearchParameters()" value = "Display" id="load"> 
-</form>
-      <form>
-         <input type="button" onclick="display()" value="Click me" />
-      </form> 
+
+</div>
+</div>
 </body>
-<footer class="bg-light text-center text-lg-start">
- Copyright 
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); margin-top: 1%; background-color: #4A148C; color: #FFFFFF; margin-bottom:0%">
-    © 2020 Copyright:
-    <a class="text-white" href="https://finna.fi/">Finna</a>
-  </div>
-   Copyright 
-</footer> 
 </html>
