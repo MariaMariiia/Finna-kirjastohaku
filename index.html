@@ -1,1 +1,139 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Finna search</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <!-- ja sitten JQuery-kirjastot alla:   -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <!--  JQuery-kirjasto päättyi -->
+  <!-- 
+          <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
+
+        <link rel="stylesheet" href="css/bootstrap-multiselect/bootstrap-multiselect.css" type="text/css">
+        <script type="text/javascript" src="js/bootstrap-multiselect/bootstrap-multiselect.js"></script>  -->
+  
+  
+  <!--    NAVBAR ALKAA -->
+  <nav class="navbar navbar-custom">
+	<a href="/" class="navbar-brand"><img src="https://raw.githubusercontent.com/MariaMariiia/Finna-kirjastohaku/main/Finna%20logo.PNG" alt="" style="height:99%; width: 70%"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbar2">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Link <span class="sr-only">Home</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="//codeply.com">Codeply</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- /*
+ <link rel="stylesheet" href="css/bootstrap-multiselect/bootstrap-multiselect.css" type="text/css">
+ 
+  <script type="text/javascript" src="js/bootstrap-multiselect/bootstrap-multiselect.js"></script>*/ -->
+<script src="server.js"></script>   
+
+</head>
+
+<body>
+<!-- /*Style alkaa*/ -->
+<style>
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-text {
+    color: #FFFFFF;
+}
+
+/* Modify the background color */
+.navbar-custom {
+    /*background-color: #AB47BC;*/
+    background-color: #4A148C;
+}
+
+.navbar-collapse .collapse{
+ color: #FFFFFF;
+}
+
+.navbar-brand{
+
+{
+
+.dropdown{
+background-color: #FFEBEE;
+}
+
+iframe {
+width: 400px;
+height: 200px;
+border: 1px solid black;
+border-radius: 5px;
+}
+
+</style>
+<!-- /* Style loppuu */ -->
+<div class="jumbotron text-center">
+  <h1>Hae Finna-kokoelmista!</h1>
+  <p>Hae kirjoja, äänitteitä ja muita tuotteita Suomen kirjastojen valikoimista.</p> 
+</div>
+<!-- /*
+
+*/ -->
+<div class="container">
+<div class="example">
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#option-droup-demo').multiselect({
+            enableClickableOptGroups: true
+        });
+        });
+    </script>
+    <select id="option-droup-demo" multiple="multiple">
+        <optgroup label="Materiaali/Material" id="materiaali">
+            <option value="kirjat" id="kirjat">Kirjat/Books</option>
+            <option value="aanitteet" id="aanitteet">Äänitteet/Recordings</option>
+            <option value="lehdet" id="artikkelit" selected="selected">Lehdet ja artikkelit/Articles</option>
+            <option value="kuvat" id="kuvat" selected="selected">Kuvat/Pictures</option>
+        </optgroup>
+        <optgroup label="Kielet/Languages" id="kielet">
+            <option value="suomi" id="suomi">Suomi/Finnish</option>
+            <option value="englanti" id="englanti">Englanti/English</option>
+            <option value="ruotsi" id="ruotsi">Ruotsi/Swedish</option>
+        </optgroup>
+    </select>
+</div>
+</div>
+</div>
+<form>
+<!-- <button type="submit" onclick="return setSearchParameters();">Submit</button> -->
+<input type = "button" onclick = "setSearchParameters()" value = "Display" id="load">
+</form>
+      <form>
+         <input type="button" onclick="display()" value="Click me" />
+      </form>
+</body>
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); margin-top: 1%; background-color: #4A148C; color: #FFFFFF; margin-bottom:0%">
+    © 2020 Copyright:
+    <a class="text-white" href="https://finna.fi/">Finna</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+</html>
