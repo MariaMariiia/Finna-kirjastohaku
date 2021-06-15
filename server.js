@@ -2,8 +2,8 @@
 function getFinnishBooks(){
 	
 	$("#button").click(function () { 
-    $("#frame").attr("src", "https://api.finna.fi/v1/search?lookfor=language%3A%22fin%22");
-	
+    $("#frame").attr("src", "https://api.finna.fi/v1/search?lookfor=filter[]=~format:"0/Book/"&filter[]=~&lng=fi");
+		      	
 }
 
 function setSearchParameters(){
