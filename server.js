@@ -7,8 +7,25 @@ function getFinnishBooks(){
 }
 
 function setSearchParameters(){
-	materiaali = document.getElementById("materiaali").value;
-	/*const choice = select.value;*/
+      const material = $("#materiaali").val()
+      const language = $("#kielet").val()
+
+
+      if (materiaali == 'kirjat' && kieli == 'suomi') {
+        getFinnishBooks();
+
+      } else if (material == 'books' && language == 'english') {
+        getEnglishBooks();
+      } else if (material == 'books' && language == 'swedish') {
+        getEnglishBooks();
+      } else if (material == 'recordings' && language == 'finnish') {
+        getFinnishRecordings();
+      } else if (material == 'recordings' && language == 'english') {
+        getFinnishRecordings();
+      } else if (material == 'recordings' && language == 'swedish') {
+        getFinnishRecordings();
+      }
+    }
 	
 	if(materiaali == 'suomkirjat'){
   getFinnishBooks();
