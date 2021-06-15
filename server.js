@@ -2,7 +2,9 @@
 function getFinnishBooks(){
 	
 	$("#button").click(function () { 
-    $("#frame").attr("src", "https://api.finna.fi/v1/search?lookfor=filter[]=~format:"0/Book/"&filter[]=~&lng=fi");
+    $("#frame").attr("src", "https://api.finna.fi/v1/search?lookfor==&facet[]=building&filter[]=~format:"0/Book/"&filter[]=~&lng=fi");
+		   <!-- https://api.finna.fi/v1/search?lookfor=kekkonen&filter[]=~format:"0/Book/"&filter[]=~format:"1/Sound/CD/" -->
+		<!-- https://api.finna.fi/v1/search?lookfor=&facet[]=building&lng=sv   -->
 		      	
 }
 
