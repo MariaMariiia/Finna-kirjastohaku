@@ -120,7 +120,8 @@ border-radius: 5px;
 <script type="text/javascript">
 $(document).ready(function(){
     $("button").click(function(){
-        $("#output").load("https://api.finna.fi/api/v1/record?&filter[]=~format:"0/Book/"&typelng=fi");
+        $("#output").load("https://api.finna.fi/v1/search?lookfor=kekkonen&filter[]=~format:"0/Book/"&filter[]=~format:"1/Sound/CD/"");
+	//("https://api.finna.fi/api/v1/record?&filter[]=~format:"0/Book/"&typelng=fi");
 	    /*https://finna.fi/Search/Results?filter%5B%5D=%7Eformat%3A%220%2FBook%2F%22&join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=&type0%5B%5D=AllFields
 	    https://finna.fi/Search/Results?filter%5B%5D=%7Elanguage%3A%22fin%22&filter%5B%5D=%7Eformat%3A%220%2FBook%2F%22&join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=&type0%5B%5D=AllFields&page=2*/
 	        /*https://api.finna.fi/v1/search?lookfor=kekkonen&filter[]=~format:"0/Book/"&filter[]=~format:"1/Sound/CD/" */
