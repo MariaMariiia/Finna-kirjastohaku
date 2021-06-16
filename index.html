@@ -120,7 +120,7 @@ border-radius: 5px;
 <script type="text/javascript">
 $(document).ready(function(){
     $("button").click(function(){
-        $("#output").load("https://api.finna.fi/v1/&filter%5B%5D=%7Elanguage%3A%22fin%22&filter%5B%5D=%7Eformat%3A%220%2FBook%2F%22&join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=&type0%5B%5D=AllFields");
+        $("#output").load("https://api.finna.fi/v1/search?lookfor=&filter[]=online_boolean:%221%22&filter[]=format:%220/Image/%22&page=100");
 	    /*https://finna.fi/Search/Results?filter%5B%5D=%7Eformat%3A%220%2FBook%2F%22&join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=&type0%5B%5D=AllFields
 	    https://finna.fi/Search/Results?filter%5B%5D=%7Elanguage%3A%22fin%22&filter%5B%5D=%7Eformat%3A%220%2FBook%2F%22&join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=&type0%5B%5D=AllFields&page=2*/
     });
