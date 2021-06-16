@@ -125,7 +125,7 @@ border-radius: 5px;
 <script type="text/javascript">
 $(document).ready(function(){
     $("button").click(function(){
-        $("#output").load("https://api.finna.fi/v1/search?filter[]=~format:"0/Book/"&filter%5B%5D=~language%3A"fin"&limit=60");
+        $("#output").load("https://api.finna.fi/v1/search?lookfor=&filter[]=online_boolean:"1"&filter[]=format:"0/Book/"&filter%5B%5D=~language%3A"fin");
     });
 });
 </script>
