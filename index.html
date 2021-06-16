@@ -116,7 +116,7 @@ border-radius: 5px;
 <script type="text/javascript">
 $(document).ready(function(){
     $("button").click(function(){
-        $("#output").load("https://api.finna.fi/v1/search?lookfor=sibelius+AND+festival");
+        $("#output").load("https://api.finna.fi/v1/search?lookfor=filter[]=~format:"0/Book/"&lng=fi");
     });
 });
 </script>
