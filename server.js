@@ -1,4 +1,4 @@
-/*
+
 
 function getFinnishBooks(){
 	
@@ -53,4 +53,4 @@ function setSearchParameters(){
 		getFinnishRecordings();
 	}
 }
-*/
+
