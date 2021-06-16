@@ -3,7 +3,7 @@
 function getFinnishBooks(){
 	
 	$("#button").click(function () { 
-    $("#frame").attr("src", "https://api.finna.fi/v1/search?sort=relevance&bool0%5B%5D=AND&lookfor0%5B%5D=sibelius&type0%5B%5D=AllFields&lookfor0%5B%5D=festival&type0%5B%5D=AllFields&lookfor0%5B%5D=&type0%5B%5D=AllFields&join=AND&filter%5B%5D=~language%3A"fin"&limit=20");
+    $("#frame").attr("src", "https://api.finna.fi/api/v1/record?prettyPrint=true&&filter[]=~format:"0/Book/"&typelng=fi");
 		   <!-- https://api.finna.fi/v1/search?lookfor=kekkonen&filter[]=~format:"0/Book/"&filter[]=~format:"1/Sound/CD/" -->
 		<!-- https://api.finna.fi/v1/search?lookfor=&facet[]=building&lng=sv   -->
 		      	
