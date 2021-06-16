@@ -50,7 +50,14 @@
  
   <script type="text/javascript" src="js/bootstrap-multiselect/bootstrap-multiselect.js"></script>*/ -->
 <script src="server.js"></script>   
-
+<!-- Alla HTML-taulukko, johon JSON-data ladataan: -->
+	<style>
+       table {
+            margin: 0 auto;
+            font-size: large;
+            border: 1px solid black;
+        }
+	</style>
 </head>
 
 <body>
@@ -95,6 +102,41 @@ border-radius: 5px;
     margin-top: 10px;
 }
 </style>
+	
+<!-- Muotoilu taulukkoa varten alla: -->
+<style>
+        table {
+            margin: 0 auto;
+            font-size: large;
+            border: 1px solid black;
+        }
+  
+        h1 {
+            text-align: center;
+            color: #006600;
+            font-size: xx-large;
+            font-family: 'Gill Sans', 
+                'Gill Sans MT', ' Calibri', 
+                'Trebuchet MS', 'sans-serif';
+        }
+  
+        td {
+            background-color: #E4F5D4;
+            border: 1px solid black;
+        }
+  
+        th,
+        td {
+            font-weight: bold;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+  
+        td {
+            font-weight: lighter;
+        }
+    </style>
 <!-- /* Style loppuu */ -->
 <div class="jumbotron text-center">
   <h1>Hae Finna-kokoelmista!</h1>
@@ -137,18 +179,69 @@ $(document).ready(function(){
 </div>
 </div>
 <form>
+	<!-- Alla buttonit, jotka eivät toimineet. Kommentoitu pois. -->
 <!-- <button type="submit" onclick="return setSearchParameters();">Submit</button> -->
-<input type = "button" onclick = "setSearchParameters()" value = "Display" id="frame">
+<!--<input type = "button" onclick = "setSearchParameters()" value = "Display" id="frame">
 </form>
       <form>
          <input type="button" onclick="display()" value="Click me" />
-      </form>
+      </form> -->
     <div class="formClass">
     <div id="output">
         <h2>Click button to load new content inside DIV box</h2>
     </div>
     <button type="button">Click to Load Content</button>
     <div>
+<!-- Alla taulukko, johon tulokset ladataan JSON-muodosta: -->
+ <section>
+        <h1>GeeksForGeeks</h1>
+  
+        <!-- TABLE CONSTRUCTION-->
+        <table id='table'>
+            <!-- HEADING FORMATION -->
+            <tr>
+                <th>GFG UserHandle</th>
+                <th>Practice Problems</th>
+                <th>Coding Score</th>
+                <th>GFG Articles</th>
+            </tr>
+  
+            <script>
+                $(document).ready(function () {
+  
+                    // FETCHING DATA FROM JSON FILE
+                    $.getJSON("gfgdetails.json", 
+                            function (data) {
+                        var student = '';
+  
+                        // ITERATING THROUGH OBJECTS
+                        $.each(data, function (key, value) {
+  
+                            //CONSTRUCTION OF ROWS HAVING
+                            // DATA FROM JSON OBJECT
+                            student += '<tr>';
+                            student += '<td>' + 
+                                value.GFGUserName + '</td>';
+  
+                            student += '<td>' + 
+                                value.NoOfProblems + '</td>';
+  
+                            student += '<td>' + 
+                                value.TotalScore + '</td>';
+  
+                            student += '<td>' + 
+                                value.Articles + '</td>';
+  
+                            student += '</tr>';
+                        });
+                          
+                        //INSERTING ROWS INTO TABLE 
+                        $('#table').append(student);
+                    });
+                });
+            </script>
+    </section>	
+<!-- Yllä oleva taulukko-osio/Section loppui -->
 </body>
 <footer class="bg-light text-center text-lg-start">
   <!-- Copyright -->
