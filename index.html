@@ -103,7 +103,7 @@ border-radius: 5px;
 }
 </style>
 	
-<!-- Muotoilu taulukkoa varten alla: -->
+<!-- GeeksForgeeks-muotoilu taulukkoa varten alla: -->
 <style>
         table {
             margin: 0 auto;
@@ -193,54 +193,7 @@ $(document).ready(function(){
     <button type="button">Click to Load Content</button>
     <div>
 <!-- Alla taulukko, johon tulokset ladataan JSON-muodosta: -->
- <section>
-        <h1>GeeksForGeeks</h1>
-  
-        <!-- TABLE CONSTRUCTION-->
-        <table id='table'>
-            <!-- HEADING FORMATION -->
-            <tr>
-                <th>GFG UserHandle</th>
-                <th>Practice Problems</th>
-                <th>Coding Score</th>
-                <th>GFG Articles</th>
-            </tr>
-  
-            <script>
-                $(document).ready(function () {
-  
-                    // FETCHING DATA FROM JSON FILE
-                    $.getJSON("gfgdetails.json", 
-                            function (data) {
-                        var student = '';
-  
-                        // ITERATING THROUGH OBJECTS
-                        $.each(data, function (key, value) {
-  
-                            //CONSTRUCTION OF ROWS HAVING
-                            // DATA FROM JSON OBJECT
-                            student += '<tr>';
-                            student += '<td>' + 
-                                value.GFGUserName + '</td>';
-  
-                            student += '<td>' + 
-                                value.NoOfProblems + '</td>';
-  
-                            student += '<td>' + 
-                                value.TotalScore + '</td>';
-  
-                            student += '<td>' + 
-                                value.Articles + '</td>';
-  
-                            student += '</tr>';
-                        });
-                          
-                        //INSERTING ROWS INTO TABLE 
-                        $('#table').append(student);
-                    });
-                });
-            </script>
-    </section>	
+ 
 <!-- Yllä oleva taulukko-osio/Section loppui -->
 </body>
 <footer class="bg-light text-center text-lg-start">
