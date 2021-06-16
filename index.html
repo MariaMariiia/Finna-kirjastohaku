@@ -85,7 +85,15 @@ height: 200px;
 border: 1px solid black;
 border-radius: 5px;
 }
-
+	</style>
+<style type="text/css" media="screen">
+  .formClass
+{
+    padding: 15px;
+    border: 12px solid #23384E;
+    background: #28BAA2;
+    margin-top: 10px;
+}
 </style>
 <!-- /* Style loppuu */ -->
 <div class="jumbotron text-center">
@@ -104,6 +112,14 @@ border-radius: 5px;
         });
         });
     </script>
+	
+<script type="text/javascript">
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#output").load("https://api.finna.fi/v1/search?lookfor=sibelius+AND+festival");
+    });
+});
+</script>
     <select id="option-droup-demo" multiple="multiple">
         <optgroup label="Materiaali/Material" id="materiaali">
             <option value="kirjat" id="kirjat">Kirjat/Books</option>
@@ -127,6 +143,12 @@ border-radius: 5px;
       <form>
          <input type="button" onclick="display()" value="Click me" />
       </form>
+    <div class="formClass">
+    <div id="output">
+        <h2>Click button to load new content inside DIV box</h2>
+    </div>
+    <button type="button">Click to Load Content</button>
+    <div>
 </body>
 <footer class="bg-light text-center text-lg-start">
   <!-- Copyright -->
