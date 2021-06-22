@@ -20,10 +20,28 @@
   <!--  JQuery-kirjasto päättyi -->
   <!-- 
           <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
-
+<!-- Arvojen perinttausta varten: https://idratherbewriting.com/learnapidoc/docapis_access_json_values.html -->
         <link rel="stylesheet" href="css/bootstrap-multiselect/bootstrap-multiselect.css" type="text/css">
         <script type="text/javascript" src="js/bootstrap-multiselect/bootstrap-multiselect.js"></script>  -->
   
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <title>Sample Page</title>
+      <script>
+         var settings = {
+           "async": true,
+           "crossDomain": true,
+           "url": "https://api.finna.fi/v1/search?lookfor=&filter[]=~format:%220/Book/%22&lng=fi",
+           "method": "GET"
+         }
+
+         $.ajax(settings).done(function (response) {
+           console.log(response);
+
+           var content = response.wind.speed;
+           $("#windSpeed").append(content);
+
+         });
+      </script>
   
   <!--    NAVBAR ALKAA -->
   <nav class="navbar navbar-custom">
@@ -167,6 +185,9 @@ $(document).ready(function(){
 <!-- Alla taulukko, johon tulokset ladataan JSON-muodosta: -->
  
 <!-- Yllä oleva taulukko-osio/Section loppui -->
+	    <!-- UUsin esimerkki: -->
+	       <h1>Sample Page</h1>
+      <div id="windSpeed">Wind speed: </div>
 </body>
 <footer class="bg-light text-center text-lg-start">
   <!-- Copyright -->
