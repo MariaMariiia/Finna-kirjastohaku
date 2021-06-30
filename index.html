@@ -85,6 +85,19 @@ border-radius: 5px;
     background: #28BAA2;
     margin-top: 10px;
 }
+	
+tr th {
+  text-align: center;
+  padding: 10px;
+  border:1px solid black;
+  
+}
+
+tr td {
+  padding: 10px;
+  border:1px solid black;
+}
+
 </style> 
 	
 <!-- /* Style loppuu */ -->
@@ -105,56 +118,46 @@ border-radius: 5px;
     </script>
 	
 <script type="text/javascript">
-$(document).ready(function(){
-    $("button").click(function(){
-	    //$("#output").load("https://api.finna.fi/v1/search?lookfor=&filter[]=~format:"0/Book/"&lng=fi&limit=20");
-	    $("#output").load("https://api.finna.fi/v1/search?lookfor=sibelius&limit=3");
-	    //$("#output").load("https://api.finna.fi/v1/search?lookfor=sibelius");
-	    //$("#output").load("https://api.finna.fi/v1/search?lookfor=&facet[]=buildingfilter[]=~format:"0/Book/"&lng=fi");
-	     //$("#output").load("https://api.finna.fi/v1/search?lookfor=&filter[]=~format:"0/Book/"&lng=fi");
-	    //$("#output").load("https://api.finna.fi/v1/search?lookfor=&filter[]=~format:"0/Book/"&lng=fi");
-        //$("#output").load("https://api.finna.fi/v1/search?lookfor=kekkonen&filter[]=~format:"0/Book/"&filter[]=~format:"1/Sound/CD/"");
-	//("https://api.finna.fi/api/v1/record?&filter[]=~format:"0/Book/"&typelng=fi");
-	    /*https://finna.fi/Search/Results?filter%5B%5D=%7Eformat%3A%220%2FBook%2F%22&join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=&type0%5B%5D=AllFields
-	    https://finna.fi/Search/Results?filter%5B%5D=%7Elanguage%3A%22fin%22&filter%5B%5D=%7Eformat%3A%220%2FBook%2F%22&join=AND&bool0%5B%5D=AND&lookfor0%5B%5D=&type0%5B%5D=AllFields&page=2*/
-	        /*https://api.finna.fi/v1/search?lookfor=kekkonen&filter[]=~format:"0/Book/"&filter[]=~format:"1/Sound/CD/" */
+$(document).ready(function() {
+const $output = $("#output");
+  $("button").click(function() {
+    $.get("https://api.finna.fi/v1/search?lookfor=&filter[]=~format:%220/Book/%22&lng=fi&limit=20",function(data) { console.log(data)
+      $output.html(
+        data.records.map(item => `<tr><td>${item.title}</td><td>${item.buildings[0].translated}</td><td>${item.nonPresenterAuthors[0].name}</td></tr>`)
+      );  
     });
+    $(this).hide();
+  });
 });
 </script>
-	<!--
-    <select id="option-droup-demo" multiple="multiple">
-        <optgroup label="Materiaali/Material" id="materiaali">
-            <option value="kirjat" id="kirjat">Kirjat/Books</option>
-            <option value="aanitteet" id="aanitteet">Äänitteet/Recordings</option>
-            <option value="lehdet" id="artikkelit" selected="selected">Lehdet ja artikkelit/Articles</option>
-            <option value="kuvat" id="kuvat" selected="selected">Kuvat/Pictures</option>
-        </optgroup>
-        <optgroup label="Kielet/Languages" id="kielet">
-            <option value="suomi" id="suomi">Suomi/Finnish</option>
-            <option value="englanti" id="englanti">Englanti/English</option>
-            <option value="ruotsi" id="ruotsi">Ruotsi/Swedish</option>
-        </optgroup>
-    </select> -->
+
 </div>
 </div>
 </div>
 <form>
-	<!-- Alla buttonit, jotka eivät toimineet. Kommentoitu pois. -->
-<!-- <button type="submit" onclick="return setSearchParameters();">Submit</button> -->
-<!--<input type = "button" onclick = "setSearchParameters()" value = "Display" id="frame">
-</form>
-      <form>
-         <input type="button" onclick="display()" value="Click me" />
-      </form> -->
     <div class="formClass">
-    <div id="output">
-        <h2>Click button to load new content inside DIV box</h2>
+	    <div>
+      <h2></h2>
     </div>
-    <button type="button">Click to Load Content</button>
-    <div>
-<!-- Alla taulukko, johon tulokset ladataan JSON-muodosta: -->
- 
-<!-- Yllä oleva taulukko-osio/Section loppui -->
+    <button type="button" name="nappula">Hae suomenkielistä kirjallisuutta</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Otsikko</th>
+          <th>Kirjastopiiri</th>
+          <th>Kirjailija</th>
+        </tr>
+      </thead>
+      <tbody  id="output">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+	    </form>
 </body>
 <footer class="bg-light text-center text-lg-start">
   <!-- Copyright -->
