@@ -9,6 +9,7 @@
 $(document).ready(function(){
     $("button").click(function(){
         $("#output").load("/Demos/html/load.html");
+        $("#output").load("https://api.finna.fi/v1/search?lookfor=&filter[]=~format:"0/Book/"&lng=fi&limit=60");
  
     });
 });
